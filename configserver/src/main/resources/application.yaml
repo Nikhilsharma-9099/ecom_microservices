@@ -18,7 +18,11 @@ spring:
     config:
       server:
         native:
+<<<<<<< HEAD
           search-locations: file:///C:/Users/user/Documents/IntellijProjects/ecom_microservices/configserver/src/main/resources/config
+=======
+          search-locations: D:/Eclipse-Workspace/ECOM_Micro/ecom_microservices/configserver/src/main/resources/config
+>>>>>>> 1c91068 (Adding the newly implemented changes in the project)
 
 server:
   port: 8888

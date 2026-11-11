@@ -24,6 +24,10 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity<List<UserResponse>> getAllUsers(){
+<<<<<<< HEAD
+=======
+    	System.out.println("REQUEST RECEIVED");
+>>>>>>> 1c91068 (Adding the newly implemented changes in the project)
         return new ResponseEntity<>(userService.fetchAllUsers(),
                 HttpStatus.OK);
     }
