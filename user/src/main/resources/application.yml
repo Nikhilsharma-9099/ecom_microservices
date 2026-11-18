@@ -5,22 +5,18 @@ spring:
     import: optional:configserver:http://localhost:8888
 
 eureka:
-<<<<<<< HEAD
+
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
     register-with-eureka: true
     fetch-registry: true
-=======
+
   instance:
     prefer-ip-address: true
     ip-address: 127.0.0.1
     hostname: localhost
     instance-id: ${spring.application.name}:${server.port}
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-
->>>>>>> 1c91068 (Adding the newly implemented changes in the project)
+ 
 
 

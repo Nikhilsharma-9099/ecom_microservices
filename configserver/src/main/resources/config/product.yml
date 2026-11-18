@@ -1,10 +1,7 @@
 spring:
-<<<<<<< HEAD
-=======
   application:
     name: product
   
->>>>>>> 1c91068 (Adding the newly implemented changes in the project)
   datasource:
     url: jdbc:postgresql://localhost:5432/productDB?currentSchema=public&options=-c%20timezone=Asia/Kolkata
     username: postgres

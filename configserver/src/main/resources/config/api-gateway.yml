@@ -1,0 +1,55 @@
+#spring:
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: false
+#      routes:
+#        - id: order
+#          uri: lb://order
+#          predicates:
+#            - Path=/orders/**, /cart/**
+#          filters:
+#            - "RewritePath=/orders(?<segment>/?.*), /api/orders${segment}"
+#            - "RewritePath=/cart(?<segment>/?.*), /api/cart${segment}"
+#
+#        - id: product
+#          uri: lb://product
+#          predicates:
+#            - Path=/products/**
+#          filters:
+#            - "RewritePath=/products(?<segment>/?.*), /api/products${segment}"
+#
+#        - id: user
+#          uri: lb://user
+#          predicates:
+#            - Path=/users/**
+#          filters:
+#            - "RewritePath=/users(?<segment>/?.*), /api/users${segment}"
+   
+server:
+  port: 8080
+  
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  tracing:
+    sampling:
+      probability: 1.0
+ 
+eureka:
+  instance:
+     prefer-ip-address: true
+     
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/     
+
+  
+
+  
